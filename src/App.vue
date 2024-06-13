@@ -6,6 +6,7 @@
       </div>
       <div class="main">
         <canvas class="canvas" ref="canvas" width="1280" height="720"></canvas>
+        <img class="output-image" ref="outputImage" :src=imageDataUrl alt="Generated Image" />
       </div>
       <div class="forms">
         <p>右クリックメニュー「名前を付けて画像を保存」またはロングタップで保存できます</p>
@@ -14,7 +15,7 @@
         <input class="form-control my-2 mx-auto" v-model="text2" placeholder="Type Here" />
       </div>
       <div class="footer mt-5">
-        <p>Version 1.0.0</p>
+        <p>Version 1.0.1</p>
         <p>Licensed under the MIT License</p>
         <a href="https://github.com/zawataku/gkms-logo-generator">GitHub Repository</a>
       </div>
@@ -33,6 +34,7 @@ export default {
       text2: 'THE iDOLM@STER',
       image: null,
       fontsLoaded: false,
+      imageDataUrl: ''
     };
   },
   watch: {
@@ -105,6 +107,8 @@ export default {
       ctx.fillStyle = '#79C4B5';
       const y2 = 550;
       ctx.fillText(this.text2, x, y2); // テキストを描画
+
+      this.imageDataUrl = canvas.toDataURL('image/png');
     },
   },
 };

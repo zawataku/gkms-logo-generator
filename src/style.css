@@ -1,4 +1,4 @@
-*{
+* {
   background-color: whitesmoke;
 }
 
@@ -30,6 +30,13 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  border: 1px solid #000;
+}
+
+.main img {
+  width: 720px;
+  max-width: 1280px;
+  height: auto;
 }
 
 .canvas {
@@ -37,6 +44,7 @@
   border: 1px solid #000;
   max-width: 1280px;
   height: auto;
+  display: none;
 }
 
 .form-control {
@@ -45,16 +53,16 @@
   margin: 10px 0;
 }
 
-.forms{
+.forms {
   margin-right: auto;
   margin-left: auto;
 }
 
-.forms p{
+.forms p {
   text-align: center;
 }
 
-.footer{
+.footer {
   text-align: center;
 }
 
@@ -62,11 +70,16 @@
   .header h1 {
     font-size: 24px;
   }
-  
+
+  .main img {
+    max-width: 100%;
+  }
+
+
   .canvas {
     max-width: 100%;
   }
-  
+
   .form-control {
     width: 100%;
     max-width: 100%;
@@ -78,11 +91,15 @@
   .header h1 {
     font-size: 20px;
   }
-  
+
+  .main img {
+    max-width: 100%;
+  }
+
   .canvas {
     max-width: 100%;
   }
-  
+
   .form-control {
     width: 100%;
     max-width: 100%;
