@@ -10,14 +10,15 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "@vue/compiler-sfc": "^3.4.27",
     "bootstrap": "^5.3.3",
     "html2canvas": "^1.4.1",
-    "vue": "^3.4.21"
+    "vue": "^3.4.27"
   },
   "devDependencies": {
     "@types/node": "^20.14.2",
     "@types/webpack-env": "^1.18.5",
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue": "^5.0.5",
     "sass": "^1.77.5",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
