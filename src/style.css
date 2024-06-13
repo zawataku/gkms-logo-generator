@@ -1,0 +1,14 @@
+.main {
+  position: relative;
+}
+
+input {
+  display: block;
+  margin-top: 10px;
+}
+
+.canvas {
+  width: 720px;
+  height: 405px;
+  border: 1px solid #000;
+}
