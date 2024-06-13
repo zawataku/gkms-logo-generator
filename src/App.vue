@@ -13,7 +13,7 @@ import html2canvas from 'html2canvas';
 export default {
   data() {
     return {
-      text: 'ABCDE',
+      text: '',
       image: null,
     };
   },
@@ -41,9 +41,12 @@ export default {
       if (this.image) {
         ctx.drawImage(this.image, 0, 0, canvas.width, canvas.height);  // 画像を描画
       }
-      ctx.font = '30px Arial';
+      ctx.font = 'bold 120px MainFont';
       ctx.fillStyle = 'black';
-      ctx.fillText(this.text, 10, canvas.height - 10);  // テキストを描画
+      ctx.textAlign = 'center';  // テキストを中央揃えに設定
+      const x = canvas.width / 2;  // キャンバスの幅の中央
+      const y =450;  // 上から100pxの位置
+      ctx.fillText(this.text, x, y);  // テキストを描画
     },
     saveImage() {
       html2canvas(this.$refs.canvas).then((canvas) => {
@@ -56,6 +59,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>
