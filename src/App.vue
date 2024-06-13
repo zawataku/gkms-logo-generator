@@ -41,20 +41,12 @@ export default {
       if (this.image) {
         ctx.drawImage(this.image, 0, 0, canvas.width, canvas.height);  // 画像を描画
       }
-      ctx.font = 'bold 120px MainFont';
+      ctx.font = '145px MainFont';
       ctx.fillStyle = 'black';
       ctx.textAlign = 'center';  // テキストを中央揃えに設定
       const x = canvas.width / 2;  // キャンバスの幅の中央
-      const y =450;  // 上から100pxの位置
+      const y = 450;  // 上から100pxの位置
       ctx.fillText(this.text, x, y);  // テキストを描画
-    },
-    saveImage() {
-      html2canvas(this.$refs.canvas).then((canvas) => {
-        const link = document.createElement('a');
-        link.href = canvas.toDataURL('image/png');
-        link.download = 'meme.png';
-        link.click();
-      });
     },
   },
 };
