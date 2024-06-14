@@ -15,7 +15,7 @@
         <input class="form-control my-2 mx-auto" v-model="text2" placeholder="Type Here" />
       </div>
       <div class="footer mt-5">
-        <p>Version 1.0.1</p>
+        <p>Version 1.0.2</p>
         <p>Licensed under the MIT License</p>
         <a href="https://github.com/zawataku/gkms-logo-generator">GitHub Repository</a>
       </div>
@@ -34,7 +34,7 @@ export default {
       text2: 'THE iDOLM@STER',
       image: null,
       fontsLoaded: false,
-      imageDataUrl: ''
+      imageDataUrl: '/images/loading.webp'
     };
   },
   watch: {
