@@ -15,7 +15,7 @@
         <input class="form-control my-2 mx-auto" v-model="text2" placeholder="Type Here" />
       </div>
       <div class="footer mt-5">
-        <p>Version 1.0.2</p>
+        <p>Version 1.0.3</p>
         <p>Licensed under the MIT License</p>
         <a href="https://github.com/zawataku/gkms-logo-generator">GitHub Repository</a>
       </div>
@@ -59,8 +59,8 @@ export default {
     },
     loadFonts() {
       return new Promise((resolve) => {
-        const font0 = new FontFace('Font_0', 'url(/fonts/SourceHanSansJP-Bold.woff2)');
-        const font1 = new FontFace('Font_1', 'url(/fonts/851tegaki_zatsu.woff2)');
+        const font0 = new FontFace('Font_0', 'url(/fonts/SourceHanSansJP-Bold_subset.woff2)');
+        const font1 = new FontFace('Font_1', 'url(/fonts/851tegakizatsu_0875_bold_subset.woff2)');
         Promise.all([font0.load(), font1.load()]).then((loadedFonts) => {
           loadedFonts.forEach((font) => document.fonts.add(font));
           this.fontsLoaded = true;
